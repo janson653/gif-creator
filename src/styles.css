@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.template-container {
+  display: flex;
+}
+
+.template-item {
+  width: 300px;
+  margin: 0px 20px;
+}
