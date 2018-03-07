@@ -7,6 +7,7 @@ import { CreatorDetailComponent } from './creator-detail/creator-detail.componen
 import {RouterModule} from '@angular/router';
 import {routes} from './app.router';
 import { CreatorHomeComponent } from './creator-home/creator-home.component';
+import {SuiModule} from 'ng2-semantic-ui';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CreatorHomeComponent } from './creator-home/creator-home.component';
   ],
   imports: [
     BrowserModule,
+    SuiModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
