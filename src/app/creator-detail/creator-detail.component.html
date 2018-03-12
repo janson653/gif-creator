@@ -1,19 +1,20 @@
-<sui-message class="icon">
-  <i class="inbox icon"></i>
-  <div class="content">
-    <div class="header">
-      message center header
+<div class="ui two column doubling stackable grid container">
+  <div class="column">
+    <p>Edit area</p>
+    <div>
+      <canvas #myCanvas></canvas>
+      <img #myImage src="../assets/img/test1.gif" style="margin-left: -300px">
     </div>
-    <p>This message shows an icon.</p>
   </div>
-</sui-message>
+  <div class="column">
+    <p>this is test</p>
+    <p>
+      <label>Input words: </label>
+      <input type="text" #myInput/>
+    </p>
+    <button class="ui primary basic button" (click)="onGenerate(myInput.value)">generate</button>
+  </div>
+</div>
 
-<div>
-  <img src="../assets/img/test1.gif">
-</div>
-<div>
-  <label>Input words: </label><input type="text"/>
-</div>
-<button class="ui primary basic button" (click)="onGenerate()">generate</button>
 
 

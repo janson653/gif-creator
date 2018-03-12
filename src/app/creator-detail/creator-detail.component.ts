@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-creator-detail',
@@ -7,13 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreatorDetailComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('myCanvas') myCanvas: ElementRef;
+  @ViewChild('myImage') myImage: ElementRef;
 
-  ngOnInit() {
+  constructor() {
   }
 
-  onGenerate() {
+  ngOnInit() {
+    console.log(this.myCanvas);
+    console.log(this.myImage);
+
+  }
+
+  onGenerate(input: String) {
     console.log('onGenerate start');
+
+    let c = this.myCanvas.nativeElement;
+    let ctx = c.getContext('2d');
+
+    // draw text
+    ctx.font = '30px Verdana';
+    // 创建渐变
+    let gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+    gradient.addColorStop('0', 'magenta');
+    gradient.addColorStop('0.5', 'blue');
+    gradient.addColorStop('1.0', 'red');
+    // 用渐变填色
+    ctx.fillStyle = gradient;
+    ctx.fillText(input, 10, 90);
   }
 
 }

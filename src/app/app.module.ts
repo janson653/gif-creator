@@ -8,13 +8,15 @@ import {RouterModule} from '@angular/router';
 import {routes} from './app.router';
 import { CreatorHomeComponent } from './creator-home/creator-home.component';
 import {SuiModule} from 'ng2-semantic-ui';
+import { AppHeaderComponent } from './app-header/app-header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatorDetailComponent,
-    CreatorHomeComponent
+    CreatorHomeComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
